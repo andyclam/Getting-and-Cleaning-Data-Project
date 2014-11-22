@@ -14,23 +14,23 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+tBodyAcc-XYZ  
+tGravityAcc-XYZ  
+tBodyAccJerk-XYZ  
+tBodyGyro-XYZ  
+tBodyGyroJerk-XYZ  
+tBodyAccMag  
+tGravityAccMag  
+tBodyAccJerkMag  
+tBodyGyroMag  
+tBodyGyroJerkMag  
+fBodyAcc-XYZ  
+fBodyAccJerk-XYZ  
+fBodyGyro-XYZ  
+fBodyAccMag  
+fBodyAccJerkMag  
+fBodyGyroMag  
+fBodyGyroJerkMag  
 
 The set of variables that were estimated from these signals are: 
 
@@ -38,4 +38,12 @@ mean(): Mean value
 std(): Standard deviation
 
 # Data Transformation
-
+1. Line 3-6: Read in all data related to the test set and combine
+2. Line 7-10: Read in all data related to the training set and combine
+3. Line 11: Combine training set and test set
+4. Line 14: Add features to the data set
+5. Line 17-18: Filter data set for only features that are related to mean and standard deviation.
+6. Line 21-22: Replace values in activity column with descriptive names according to the activity_labels.txt file
+7. Line 25: Replace headers in data set with appropriate descriptive names
+8. Line 28-41: Creates a tidy data set that is the average of each subject and each activity by split-apply-combine technique
+9. Line 43: Output tidy data set
